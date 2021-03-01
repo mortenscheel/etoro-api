@@ -29,20 +29,20 @@ class PositionsController {
         return httpClient.getHistoryPositions(limit, page, StartTime, ofString(mode))
     }
 
-    @PostMapping(value = ["/open"])
-    fun openPosition(@RequestBody position: Position, @RequestHeader(defaultValue = "Demo") mode: String): Transaction {
-        return httpClient.openPosition(position, ofString(mode))
-    }
+    // @PostMapping(value = ["/open"])
+    // fun openPosition(@RequestBody position: Position, @RequestHeader(defaultValue = "Demo") mode: String): Transaction {
+    //     return httpClient.openPosition(position, ofString(mode))
+    // }
 
-    @PutMapping(value = ["/update"])
-    fun updatePosition(@RequestBody etoroPosition: EtoroPositionForUpdate, @RequestHeader(defaultValue = "Demo") mode: String): Transaction {
-        return httpClient.updatePosition(etoroPosition, ofString(mode))
-    }
+    // @PutMapping(value = ["/update"])
+    // fun updatePosition(@RequestBody etoroPosition: EtoroPositionForUpdate, @RequestHeader(defaultValue = "Demo") mode: String): Transaction {
+    //     return httpClient.updatePosition(etoroPosition, ofString(mode))
+    // }
 
-    @DeleteMapping(value = ["/close"])
-    fun closePosition(id: String, @RequestHeader(defaultValue = "Demo") mode: String) {
-        httpClient.deletePosition(id, ofString(mode))
-    }
+    // @DeleteMapping(value = ["/close"])
+    // fun closePosition(id: String, @RequestHeader(defaultValue = "Demo") mode: String) {
+    //     httpClient.deletePosition(id, ofString(mode))
+    // }
 
 }
 
