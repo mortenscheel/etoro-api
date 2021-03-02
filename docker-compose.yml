@@ -8,6 +8,7 @@ services:
   etoro-api:
     build: .
     container_name: etoro_api
+    restart: unless-stopped
     environment:
       LOGIN: ${LOGIN}
       PASSWORD: ${PASSWORD}
